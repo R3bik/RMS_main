@@ -8,3 +8,8 @@ C:\Users\loyal\source\repos\RMS\RMS\obj\Debug\RMS.csproj.GenerateResource.cache
 C:\Users\loyal\source\repos\RMS\RMS\obj\Debug\RMS.csproj.CoreCompileInputs.cache
 C:\Users\loyal\source\repos\RMS\RMS\obj\Debug\RMS.exe
 C:\Users\loyal\source\repos\RMS\RMS\obj\Debug\RMS.pdb
+C:\Users\loyal\source\repos\RMS\RMS\bin\Debug\Guna.UI.dll
+C:\Users\loyal\source\repos\RMS\RMS\obj\Debug\RMS.frmMain.resources
+C:\Users\loyal\source\repos\RMS\RMS\obj\Debug\RMS.csproj.CopyComplete
+C:\Users\loyal\source\repos\RMS\RMS\obj\Debug\RMS.frmHome.resources
+C:\Users\loyal\source\repos\RMS\RMS\obj\Debug\RMS.SampleAdd.resources

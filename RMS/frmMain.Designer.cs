@@ -30,29 +30,34 @@
         {
             this.colorDialog1 = new System.Windows.Forms.ColorDialog();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.panel2 = new System.Windows.Forms.Panel();
+            this.ControlsPanel = new System.Windows.Forms.Panel();
             this.panel3 = new System.Windows.Forms.Panel();
             this.btnExit = new Guna.UI.WinForms.GunaControlBox();
             this.gunaControlBox2 = new Guna.UI.WinForms.GunaControlBox();
             this.gunaControlBox3 = new Guna.UI.WinForms.GunaControlBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
-            this.button4 = new System.Windows.Forms.Button();
-            this.button5 = new System.Windows.Forms.Button();
+            this.btnHome = new System.Windows.Forms.Button();
+            this.btnCategory = new System.Windows.Forms.Button();
+            this.btnProduct = new System.Windows.Forms.Button();
+            this.btnTable = new System.Windows.Forms.Button();
+            this.btnStaff = new System.Windows.Forms.Button();
+            this.btnPos = new System.Windows.Forms.Button();
+            this.btnSetting = new System.Windows.Forms.Button();
+            this.lblUser = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
-            this.panel2.SuspendLayout();
+            this.ControlsPanel.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(55)))), ((int)(((byte)(89)))));
-            this.panel1.Controls.Add(this.button5);
-            this.panel1.Controls.Add(this.button4);
-            this.panel1.Controls.Add(this.button3);
-            this.panel1.Controls.Add(this.button2);
-            this.panel1.Controls.Add(this.button1);
+            this.panel1.Controls.Add(this.btnSetting);
+            this.panel1.Controls.Add(this.btnPos);
+            this.panel1.Controls.Add(this.btnStaff);
+            this.panel1.Controls.Add(this.btnTable);
+            this.panel1.Controls.Add(this.btnProduct);
+            this.panel1.Controls.Add(this.btnCategory);
+            this.panel1.Controls.Add(this.btnHome);
             this.panel1.Controls.Add(this.label1);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel1.Location = new System.Drawing.Point(0, 0);
@@ -60,17 +65,18 @@
             this.panel1.Size = new System.Drawing.Size(200, 657);
             this.panel1.TabIndex = 0;
             // 
-            // panel2
+            // ControlsPanel
             // 
-            this.panel2.BackColor = System.Drawing.Color.Gainsboro;
-            this.panel2.Controls.Add(this.gunaControlBox3);
-            this.panel2.Controls.Add(this.gunaControlBox2);
-            this.panel2.Controls.Add(this.btnExit);
-            this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel2.Location = new System.Drawing.Point(200, 0);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(803, 59);
-            this.panel2.TabIndex = 1;
+            this.ControlsPanel.BackColor = System.Drawing.Color.Gainsboro;
+            this.ControlsPanel.Controls.Add(this.lblUser);
+            this.ControlsPanel.Controls.Add(this.gunaControlBox3);
+            this.ControlsPanel.Controls.Add(this.gunaControlBox2);
+            this.ControlsPanel.Controls.Add(this.btnExit);
+            this.ControlsPanel.Dock = System.Windows.Forms.DockStyle.Top;
+            this.ControlsPanel.Location = new System.Drawing.Point(200, 0);
+            this.ControlsPanel.Name = "ControlsPanel";
+            this.ControlsPanel.Size = new System.Drawing.Size(803, 59);
+            this.ControlsPanel.TabIndex = 1;
             // 
             // panel3
             // 
@@ -143,56 +149,88 @@
             this.label1.TabIndex = 1;
             this.label1.Text = "FOODIE-FLOW";
             // 
-            // button1
+            // btnHome
             // 
-            this.button1.BackColor = System.Drawing.Color.RosyBrown;
-            this.button1.Location = new System.Drawing.Point(60, 134);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(140, 41);
-            this.button1.TabIndex = 2;
-            this.button1.Text = "HOME";
-            this.button1.UseVisualStyleBackColor = false;
+            this.btnHome.BackColor = System.Drawing.Color.RosyBrown;
+            this.btnHome.Location = new System.Drawing.Point(60, 134);
+            this.btnHome.Name = "btnHome";
+            this.btnHome.Size = new System.Drawing.Size(140, 41);
+            this.btnHome.TabIndex = 2;
+            this.btnHome.Text = "HOME";
+            this.btnHome.UseVisualStyleBackColor = false;
+            this.btnHome.Click += new System.EventHandler(this.btnHome_Click);
             // 
-            // button2
+            // btnCategory
             // 
-            this.button2.BackColor = System.Drawing.Color.RosyBrown;
-            this.button2.Location = new System.Drawing.Point(60, 219);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(140, 41);
-            this.button2.TabIndex = 3;
-            this.button2.Text = "CATEGORIES";
-            this.button2.UseVisualStyleBackColor = false;
+            this.btnCategory.BackColor = System.Drawing.Color.RosyBrown;
+            this.btnCategory.Location = new System.Drawing.Point(60, 207);
+            this.btnCategory.Name = "btnCategory";
+            this.btnCategory.Size = new System.Drawing.Size(140, 41);
+            this.btnCategory.TabIndex = 3;
+            this.btnCategory.Text = "CATEGORIES";
+            this.btnCategory.UseVisualStyleBackColor = false;
             // 
-            // button3
+            // btnProduct
             // 
-            this.button3.BackColor = System.Drawing.Color.RosyBrown;
-            this.button3.Location = new System.Drawing.Point(60, 306);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(140, 41);
-            this.button3.TabIndex = 4;
-            this.button3.Text = "PRODUCT";
-            this.button3.UseVisualStyleBackColor = false;
-            this.button3.Click += new System.EventHandler(this.button3_Click);
+            this.btnProduct.BackColor = System.Drawing.Color.RosyBrown;
+            this.btnProduct.Location = new System.Drawing.Point(60, 279);
+            this.btnProduct.Name = "btnProduct";
+            this.btnProduct.Size = new System.Drawing.Size(140, 41);
+            this.btnProduct.TabIndex = 4;
+            this.btnProduct.Text = "PRODUCT";
+            this.btnProduct.UseVisualStyleBackColor = false;
+            this.btnProduct.Click += new System.EventHandler(this.button3_Click);
             // 
-            // button4
+            // btnTable
             // 
-            this.button4.BackColor = System.Drawing.Color.RosyBrown;
-            this.button4.Location = new System.Drawing.Point(60, 391);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(140, 41);
-            this.button4.TabIndex = 5;
-            this.button4.Text = "TABLE";
-            this.button4.UseVisualStyleBackColor = false;
+            this.btnTable.BackColor = System.Drawing.Color.RosyBrown;
+            this.btnTable.Location = new System.Drawing.Point(60, 347);
+            this.btnTable.Name = "btnTable";
+            this.btnTable.Size = new System.Drawing.Size(140, 41);
+            this.btnTable.TabIndex = 5;
+            this.btnTable.Text = "TABLE";
+            this.btnTable.UseVisualStyleBackColor = false;
             // 
-            // button5
+            // btnStaff
             // 
-            this.button5.BackColor = System.Drawing.Color.RosyBrown;
-            this.button5.Location = new System.Drawing.Point(60, 476);
-            this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(140, 41);
-            this.button5.TabIndex = 6;
-            this.button5.Text = "STAFF";
-            this.button5.UseVisualStyleBackColor = false;
+            this.btnStaff.BackColor = System.Drawing.Color.RosyBrown;
+            this.btnStaff.Location = new System.Drawing.Point(60, 414);
+            this.btnStaff.Name = "btnStaff";
+            this.btnStaff.Size = new System.Drawing.Size(140, 41);
+            this.btnStaff.TabIndex = 6;
+            this.btnStaff.Text = "STAFF";
+            this.btnStaff.UseVisualStyleBackColor = false;
+            // 
+            // btnPos
+            // 
+            this.btnPos.BackColor = System.Drawing.Color.RosyBrown;
+            this.btnPos.Location = new System.Drawing.Point(60, 484);
+            this.btnPos.Name = "btnPos";
+            this.btnPos.Size = new System.Drawing.Size(140, 41);
+            this.btnPos.TabIndex = 7;
+            this.btnPos.Text = "POS";
+            this.btnPos.UseVisualStyleBackColor = false;
+            // 
+            // btnSetting
+            // 
+            this.btnSetting.BackColor = System.Drawing.Color.RosyBrown;
+            this.btnSetting.Location = new System.Drawing.Point(60, 559);
+            this.btnSetting.Name = "btnSetting";
+            this.btnSetting.Size = new System.Drawing.Size(140, 41);
+            this.btnSetting.TabIndex = 8;
+            this.btnSetting.Text = "SETTING";
+            this.btnSetting.UseVisualStyleBackColor = false;
+            this.btnSetting.Click += new System.EventHandler(this.button7_Click);
+            // 
+            // lblUser
+            // 
+            this.lblUser.AutoSize = true;
+            this.lblUser.BackColor = System.Drawing.Color.Transparent;
+            this.lblUser.Location = new System.Drawing.Point(23, 24);
+            this.lblUser.Name = "lblUser";
+            this.lblUser.Size = new System.Drawing.Size(55, 23);
+            this.lblUser.TabIndex = 3;
+            this.lblUser.Text = "label2";
             // 
             // frmMain
             // 
@@ -201,16 +239,18 @@
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(1003, 657);
             this.Controls.Add(this.panel3);
-            this.Controls.Add(this.panel2);
+            this.Controls.Add(this.ControlsPanel);
             this.Controls.Add(this.panel1);
             this.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "frmMain";
             this.Text = "frmMain";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
+            this.Load += new System.EventHandler(this.frmMain_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
-            this.panel2.ResumeLayout(false);
+            this.ControlsPanel.ResumeLayout(false);
+            this.ControlsPanel.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -219,16 +259,19 @@
 
         private System.Windows.Forms.ColorDialog colorDialog1;
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.Panel panel2;
+        private System.Windows.Forms.Panel ControlsPanel;
         private System.Windows.Forms.Panel panel3;
         private Guna.UI.WinForms.GunaControlBox gunaControlBox3;
         private Guna.UI.WinForms.GunaControlBox gunaControlBox2;
         private Guna.UI.WinForms.GunaControlBox btnExit;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button button4;
-        private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button5;
+        private System.Windows.Forms.Button btnHome;
+        private System.Windows.Forms.Button btnTable;
+        private System.Windows.Forms.Button btnProduct;
+        private System.Windows.Forms.Button btnCategory;
+        private System.Windows.Forms.Button btnStaff;
+        private System.Windows.Forms.Button btnSetting;
+        private System.Windows.Forms.Button btnPos;
+        private System.Windows.Forms.Label lblUser;
     }
 }
