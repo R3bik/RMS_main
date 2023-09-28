@@ -17,12 +17,17 @@ namespace RMS
             InitializeComponent();
         }
 
-        public virtual void btnAdd_Click(object sender, EventArgs e)
+       /* public virtual void btnAdd_Click(object sender, EventArgs e)
+        {
+
+        }*/
+
+        public virtual void txtSearch_TextChanged(object sender, EventArgs e)
         {
 
         }
 
-        public virtual void txtSearch_TextChanged(object sender, EventArgs e)
+        public virtual void btnAdd_Click_1(object sender, EventArgs e)
         {
 
         }

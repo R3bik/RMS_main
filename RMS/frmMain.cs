@@ -19,7 +19,7 @@ namespace RMS
         }
 
         //Methods to add control in main form
-        public  void AddControls(Form f)
+        public void AddControls(Form f)
         {
             ControlsPanel.Controls.Clear();
             f.Dock = DockStyle.Fill;
@@ -28,25 +28,14 @@ namespace RMS
             f.Show();
         }
 
-            private void btnExit_Click(object sender, EventArgs e)
+        private void btnExit_Click(object sender, EventArgs e)
         {
             Application.Exit();
         }
 
-        private void pictureBox1_Click(object sender, EventArgs e)
-        {
+        
 
-        }
-
-        private void button3_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void button7_Click(object sender, EventArgs e)
-        {
-
-        }
+        
 
         private void frmMain_Load(object sender, EventArgs e)
         {
@@ -61,6 +50,25 @@ namespace RMS
         private void btnCategory_Click(object sender, EventArgs e)
         {
             AddControls(new frmCategoryView()); 
+        }
+        private void button3_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button7_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void ControlsPanel_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void btnTable_Click(object sender, EventArgs e)
+        {
+            AddControls(new frmTableView());    
         }
     }
 }

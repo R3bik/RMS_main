@@ -1,5 +1,4 @@
-﻿using Guna.UI.WinForms;
-using RMS.Model;
+﻿using RMS.Model;
 using System;
 using System.Collections;
 using System.Collections.Generic;
@@ -13,28 +12,44 @@ using System.Windows.Forms;
 
 namespace RMS.View
 {
-    public partial class frmCategoryView : SampleView
+    public partial class frmTableView : SampleView
     {
-        public frmCategoryView()
+        public frmTableView()
         {
             InitializeComponent();
         }
+
+        private void txtSearch_TextChanged_1(object sender, EventArgs e)
+        {
+
+        }
+
+        private void gunaDataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        private void btnAdd_Click(object sender, EventArgs e)
+        {
+
+        }
+        public void frmTableView_Load(object sender, EventArgs e)
+        {
+            //Create table database
+
+            GetData();
+        }
         public void GetData()
         {
-            string qry = "Select * From category where catName like '%" + txtSearch.Text + "%' ";
+            string qry = "Select * From tables where tName like '%" + txtSearch.Text + "%' ";
             ListBox lb = new ListBox();
             lb.Items.Add(dgvid);
             lb.Items.Add(dgvName);
             MainClass.LoadData(qry, gunaDataGridView1, lb);
         }
-            private void frmCategoryView_Load(object sender, EventArgs e)
-        {
-            GetData();
-        }
-
         public override void btnAdd_Click_1(object sender, EventArgs e)
         {
-            frmCategoryAdd frm = new frmCategoryAdd();
+            frmTableAdd frm = new frmTableAdd();
             frm.ShowDialog();
             GetData();
         }
@@ -48,24 +63,24 @@ namespace RMS.View
         {
             if (gunaDataGridView1.CurrentCell.OwningColumn.Name == "dgvedit")
             {
-                frmCategoryAdd frm = new frmCategoryAdd();
+                frmTableAdd frm = new frmTableAdd();
                 frm.id = Convert.ToInt32(gunaDataGridView1.CurrentRow.Cells["dgvid"].Value);
                 frm.txtName.Text = Convert.ToString(gunaDataGridView1.CurrentRow.Cells["dgvName"].Value);
                 frm.ShowDialog();
                 GetData();
             }
 
-                if (gunaDataGridView1.CurrentCell.OwningColumn.Name == "dgvdel")
-                
-                {
-                        int id = Convert.ToInt32(gunaDataGridView1.CurrentRow.Cells["dgvid"].Value);
-                        string qry = "Delete from category where catID=" + id + "";
-                        Hashtable ht = new Hashtable();
-                        MainClass.SQl(qry, ht);
-                        MessageBox.Show("Deleted successfully");
-                        GetData();
-                }
-                      
+            if (gunaDataGridView1.CurrentCell.OwningColumn.Name == "dgvdel")
+
+            {
+                int id = Convert.ToInt32(gunaDataGridView1.CurrentRow.Cells["dgvid"].Value);
+                string qry = "Delete from Tables where tID=" + id + "";
+                Hashtable ht = new Hashtable();
+                MainClass.SQl(qry, ht);
+                MessageBox.Show("Deleted successfully");
+                GetData();
+            }
+
         }
     }
 }

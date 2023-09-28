@@ -16,3 +16,5 @@ C:\Users\loyal\source\repos\RMS\RMS\obj\Debug\RMS.SampleAdd.resources
 C:\Users\loyal\source\repos\RMS\RMS\obj\Debug\RMS.SampleView.resources
 C:\Users\loyal\source\repos\RMS\RMS\obj\Debug\RMS.View.frmCategoryView.resources
 C:\Users\loyal\source\repos\RMS\RMS\obj\Debug\RMS.Model.frmCategoryAdd.resources
+C:\Users\loyal\source\repos\RMS\RMS\obj\Debug\RMS.View.frmTableView.resources
+C:\Users\loyal\source\repos\RMS\RMS\obj\Debug\RMS.Model.frmTableAdd.resources

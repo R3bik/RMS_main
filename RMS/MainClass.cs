@@ -107,6 +107,8 @@ namespace RMS
         //For loading from database
         public static void LoadData(string qry, DataGridView gv, ListBox lb)
         {
+            //Serial no in grid
+          
             try
             {
                 SqlCommand cmd = new SqlCommand(qry, con);
@@ -127,5 +129,6 @@ namespace RMS
                 con.Close();
             }
         }
+
     }
 }

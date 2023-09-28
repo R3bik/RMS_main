@@ -1,5 +1,5 @@
-﻿create table category(
-
-	catID int primary key identity,
-	catName varchar(50)
+﻿create table tables
+(
+tid int primary key identity,
+tname varchar(15)
 )
