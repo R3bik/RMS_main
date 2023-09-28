@@ -1,0 +1,10 @@
+C:\Users\loyal\source\repos\RMS\RMS\bin\Debug\RMS.exe.config
+C:\Users\loyal\source\repos\RMS\RMS\bin\Debug\RMS.exe
+C:\Users\loyal\source\repos\RMS\RMS\bin\Debug\RMS.pdb
+C:\Users\loyal\source\repos\RMS\RMS\obj\Debug\RMS.csproj.AssemblyReference.cache
+C:\Users\loyal\source\repos\RMS\RMS\obj\Debug\RMS.frmLogin.resources
+C:\Users\loyal\source\repos\RMS\RMS\obj\Debug\RMS.Properties.Resources.resources
+C:\Users\loyal\source\repos\RMS\RMS\obj\Debug\RMS.csproj.GenerateResource.cache
+C:\Users\loyal\source\repos\RMS\RMS\obj\Debug\RMS.csproj.CoreCompileInputs.cache
+C:\Users\loyal\source\repos\RMS\RMS\obj\Debug\RMS.exe
+C:\Users\loyal\source\repos\RMS\RMS\obj\Debug\RMS.pdb
