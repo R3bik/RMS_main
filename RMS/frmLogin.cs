@@ -21,5 +21,20 @@ namespace RMS
         {
             Application.Exit();
         }
+
+        private void btnLogin_Click(object sender, EventArgs e)
+        {
+            if (MainClass.IsValidUser(txtUser.Text, txtPass.Text) == false)
+            {
+                MessageBox.Show("Invalid username or password!");
+                return;
+            }
+            else
+            {
+                this.Hide();
+                frmMain frm=  new frmMain();
+                frm.Show();
+            }
+        }
     }
 }
