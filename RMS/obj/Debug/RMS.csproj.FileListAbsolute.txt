@@ -13,3 +13,6 @@ C:\Users\loyal\source\repos\RMS\RMS\obj\Debug\RMS.frmMain.resources
 C:\Users\loyal\source\repos\RMS\RMS\obj\Debug\RMS.csproj.CopyComplete
 C:\Users\loyal\source\repos\RMS\RMS\obj\Debug\RMS.frmHome.resources
 C:\Users\loyal\source\repos\RMS\RMS\obj\Debug\RMS.SampleAdd.resources
+C:\Users\loyal\source\repos\RMS\RMS\obj\Debug\RMS.SampleView.resources
+C:\Users\loyal\source\repos\RMS\RMS\obj\Debug\RMS.View.frmCategoryView.resources
+C:\Users\loyal\source\repos\RMS\RMS\obj\Debug\RMS.Model.frmCategoryAdd.resources

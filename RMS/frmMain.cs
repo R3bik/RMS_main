@@ -1,4 +1,5 @@
-﻿using System;
+﻿using RMS.View;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -55,6 +56,11 @@ namespace RMS
         private void btnHome_Click(object sender, EventArgs e)
         {
             AddControls(new frmHome());
+        }
+
+        private void btnCategory_Click(object sender, EventArgs e)
+        {
+            AddControls(new frmCategoryView()); 
         }
     }
 }

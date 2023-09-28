@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.Data;
 using System.Data.SqlClient;
@@ -9,13 +10,13 @@ using System.Windows.Forms;
 
 namespace RMS
 {
-     class MainClass
+    class MainClass
     {
         public static readonly string con_string = "Data Source=laptop-tj9evupb;Initial Catalog=RMS;Integrated Security=True;";
 
         public static SqlConnection con = new SqlConnection(con_string);
 
-        
+
         public static bool IsValidUser(string user, string pass)
         {
             bool isValid = false;
@@ -66,7 +67,7 @@ namespace RMS
 
 
             return isValid;
-         }
+        }
 
         //create properties for username
         public static string user;
@@ -75,6 +76,56 @@ namespace RMS
         {
             get { return user; }
             private set { user = value; }
+        }
+
+        //Method for CRUD operation
+
+        public static int SQl(string qry, Hashtable ht)
+        {
+            int res = 0;
+            try
+            {
+                SqlCommand cmd = new SqlCommand(qry, con);
+                cmd.CommandType = CommandType.Text;
+
+                foreach (DictionaryEntry item in ht)
+                {
+                    cmd.Parameters.AddWithValue(item.Key.ToString(), item.Value);
+                }
+                if (con.State == ConnectionState.Closed) { con.Open(); }
+                res = cmd.ExecuteNonQuery();
+                if (con.State == ConnectionState.Open) { con.Close(); }
+
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.ToString());
+                con.Close();
+            }
+            return res;
+        }
+        //For loading from database
+        public static void LoadData(string qry, DataGridView gv, ListBox lb)
+        {
+            try
+            {
+                SqlCommand cmd = new SqlCommand(qry, con);
+                cmd.CommandType = CommandType.Text;
+                SqlDataAdapter da = new SqlDataAdapter(cmd);
+                DataTable dt = new DataTable();
+                da.Fill(dt);
+                for (int i = 0; i < lb.Items.Count; i++)
+                {
+                    string colNam1 = ((DataGridViewColumn)lb.Items[i]).Name;
+                    gv.Columns[colNam1].DataPropertyName = dt.Columns[i].ToString();
+                }
+                gv.DataSource = dt;
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.ToString());
+                con.Close();
+            }
         }
     }
 }
